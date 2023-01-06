@@ -15,17 +15,20 @@
 }
 .card{
   margin: 5px;
+  width: 18rem;
 }
+
 .sidebar{
   margin-top: 3px;
   margin-left: 3px;
-  width: 15vw;
+  width: 200px;
   height: 80vh;
   background-color: rgb(94, 87, 87);
   border-radius: 10px;
+  transition: all 0.2s;
  
 }
-#sideItem{
+.sideItem{
     color: aliceblue;
     width: 100%;
     height: 70%;
@@ -35,6 +38,7 @@
     padding-left: 5px;
     padding-right: 5px;
 }
+
 .header{
   width: 99vw;
   height: 10vh;
@@ -109,6 +113,7 @@ border-radius: 50px;
 }
 #modal-body img{
   border-radius: 20px;
+  width: 100px;
   }
   #modal-body i{
     font-size: 20px;
@@ -126,7 +131,7 @@ border-radius: 50px;
 }
 .cartbox{
   margin: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .totalamount{
 width: 100%;
@@ -134,3 +139,125 @@ text-align: right;
 padding-bottom: 5px;
   
 }
+
+#toggle-sidebar{
+  display: none;
+}
+
+.search{
+  width: 98vw;
+  height: 20px;
+ text-align: center;
+ /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 890px) {
+.sidebar{
+    position: absolute;
+    z-index: 1;
+   
+  }
+#toggle-sidebar{
+
+    position: absolute;
+    top: 0px;
+    right: 7px;
+    font-size: larger;
+    display: block;
+  }
+.togglebtn{
+  border-radius: none;
+    width: 35px;
+   
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+.togglebar{
+    /* width: 100%; */
+    margin-right: 10px;
+    color: aliceblue;
+    /* border: 1px solid white; */
+  }
+.Toggle{
+  display: none;
+}
+.cards{
+  margin: auto;
+}
+.header input{
+  width: 15rem;
+  border-radius: 10px;
+  padding: 1px 0.5rem;
+}
+.header div:nth-of-type(1){
+  font-size: 1.2rem;
+}
+.togglebar i{
+  font-size: 18px;
+}
+
+}
+@media screen and (max-width: 710px) {
+  .card{
+    width: 13rem;
+    height: 23rem;
+   }
+   #modal-body{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    margin: 10px;
+    align-items: center;
+    border: 1px solid black;
+  }
+  #modal-body img{
+    border-radius: 20px;
+    width: 70px;
+    }
+    #modal-body i{
+      font-size: 20px;
+      color: red;
+    }
+    #select{
+      width: 30px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+ .card{
+  width: 13rem;
+  height: 23rem;
+ }
+ .header input{
+  width: 10rem;
+  border-radius: 10px;
+  padding: 0px 0.5rem;
+}
+.header div:nth-of-type(1){
+  font-size: 1rem;
+}
+}
+@media screen and (max-width: 570px) {
+
+  #modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    align-items: center;
+    border: 1px solid black;
+  }
+  #modal-body img{
+    border-radius: 20px;
+    width: 100px;
+    margin: 5px;
+    }
+    #cartname{
+      width: 100%;
+      text-align: center;
+    }
+    #select{
+      width: 80px;
+    }
+ }

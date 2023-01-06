@@ -16,16 +16,16 @@ const CartDetail = () => {
             <>
               <div id="modal-body" key={data.id} >
 
-                <img src={data.image} alt="" width={"100px"} />
+                <img src={data.image} alt="" />
 
                 <div id='cartname'>
                   <p>{data.name}</p>
                 </div>
 
                 <div>
-
                   <p>Price: <BiRupee />{data.price*data.qty}</p>
                 </div>
+
                 <div>
                   <select name="" id="select" onChange={(e) => dispatch({ type: 'change_qty', payload: { Id: data.id, qty: e.target.value } })}>
                     {

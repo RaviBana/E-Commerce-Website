@@ -15,7 +15,7 @@ const Header = () => {
        <div> <Link to={'/'} id='link'>sHopPing Cart</Link> </div>
 
        <div>
-        <input type="text" placeholder='Enter to search products...' onChange={(e)=>dispatch1({type:'search', payload:e.target.value.toLowerCase()})}/>
+        <input type="text" placeholder='Enter to search..' onChange={(e)=>dispatch1({type:'search', payload:e.target.value.toLowerCase()})}/>
        </div>
 
        <div id='batch'  data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -32,7 +32,7 @@ const Header = () => {
 </button> */}
 
 
-<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">

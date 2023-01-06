@@ -14,7 +14,7 @@ const Ratings = ({ratings}) => {
         }
     )
     }
-   {ratings} </>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCartContext } from '../context/Context';
 import Sidebar from './Sidebar';
 import SingleCard from './SingleCard';
@@ -7,6 +7,7 @@ const Home = () => {
     // console.log(state1.byprice)
     // const {state} = useCartContext();
     // or
+    const [result, setResult]= useState('')
     const {state:{products , cart}} = useCartContext()
     const {byStock,
         byFastDelivery,
@@ -46,11 +47,13 @@ const filterProducts=()=>{
         console.log('fast',sortProducts)
     }
 
-
+    // setResult(sortProducts.length)
     return sortProducts
 }
 
     return (
+        <>
+            <div className='search'>Number of Products:- {filterProducts().length}</div>
         <div className='homediv'>
         <Sidebar/>
     <div className='cards'>
@@ -60,6 +63,7 @@ const filterProducts=()=>{
 
     </div>
        </div>
+        </>
   )
 }
 

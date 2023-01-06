@@ -11,12 +11,12 @@ const SingleCard = ({product}) => {
   return (
     <div>
 
-    <div className="card" style={{width: '14rem'}}>
+    <div className="card">
     <img src={product.image} className="card-img-top" alt="..."/>
     <div className="card-body">
       <h5 className="card-title">{product.name.substring(0,15)}..</h5>
       <p className="card-text my-1"> Price: <BiRupee/>{product.price.split('.')[0]}</p>
-      <p className="card-text my-1">4 days delivery</p>
+      <p className="card-text my-1">{product.fastDelivery?'Fast Delivery':'4 days delivery'}</p>
       <p className="card-text">Ratings: <Ratings ratings={product.ratings}/></p>
 
 {
@@ -25,7 +25,7 @@ const SingleCard = ({product}) => {
     ):(
         !product.inStock?(
 
-            <a className="btn btn-danger" disabled={false}   onClick={()=>{dispatch({type: 'Add_to_cart',payload: product})}} >Out Of Stock</a>
+            <a className="btn btn-danger" >Out Of Stock</a>
         )
         :(
 
